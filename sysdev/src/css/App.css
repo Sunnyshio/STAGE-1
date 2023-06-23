@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+:root {
+  --darkBrown: #9e7676;
+  --gradient1: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  --lightPink: #e2bebe;
+  --lightOr: #ffecd2;
+  --darkOr: #fcb69f;
+  --back: #DFD3C3;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--back);
+}
+
+.App {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  font-size: small;
+  top: 2.5rem;
+  color: var(--darkBrown);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  padding: 2rem 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.card .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.card .card-avatar {
+  --size: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem;
+}
+.card .card-avatar img {
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  transition: transform 0.2s ease;
+}
+.card .card-social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-social-container .card-social {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  opacity: 0;
+  margin-left: -40px;
+  margin-top: -5px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.card .card-social-container .card-social .card-social__item {
+  list-style: none;
+}
+.card .card-social-container .card-social .card-social__item i {
+  display: block;
+  height: 18px;
+  width: 18px;
+  color: #9e7676;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.card .card-social-container .card-social .card-social__item a {
+  text-decoration: none;
+  color: #9e7676;
+}
+.card .card-name {
+  color: #9e7676;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 2rem;
+}
+.card .card-id,
+.card .csi-p {
+  color: #9e7676;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+.card .csi-p {
+  display: flex;
+  align-items: center;
+}
+.card:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 5px 5px 0 0 #e3dada;
+  cursor: pointer;
+}
+.card:hover .card-info {
+  transform: translateY(-5%);
+}
+.card:hover .card-social {
+  transform: translateY(100%);
+  opacity: 1;
+}
+.card .card-social__item i:hover {
+  fill: #9e7676;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.card .card-avatar:hover {
+  transform: scale(1.1);
+}
+.card hr {
+  position: relative;
+  width: 90%;
+  color: #9e7676;
+  margin-top: 25px;
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.card:hover hr {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=App.css.map */
