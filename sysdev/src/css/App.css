@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 
 :root {
   --darkBrown: #9e7676;
@@ -6,7 +6,7 @@
   --lightPink: #e2bebe;
   --lightOr: #ffecd2;
   --darkOr: #fcb69f;
-  --back: #DFD3C3;
+  --back: #dfd3c3;
 }
 
 body {
@@ -19,19 +19,40 @@ body {
 
 .App {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
+/* Greeting styles*/
+.hello {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -3rem;
+}
+.cat {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-left: 1rem;
+  margin-bottom: -1rem;
+}
 .title {
-  position: absolute;
-  font-family: 'Nunito', sans-serif;
+  position: relative;
+  letter-spacing: 1px;
+  font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   font-size: small;
-  top: 2.5rem;
+  margin-bottom: 2.5rem;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(87, 85, 85);
   color: var(--darkBrown);
 }
 
+/* card styles */
 .card {
   display: flex;
   flex-direction: column;
@@ -116,6 +137,8 @@ body {
   display: flex;
   align-items: center;
 }
+
+/* card animation */
 .card:hover {
   transform: translateY(-4px) translateX(-2px);
   box-shadow: 5px 5px 0 0 #e3dada;
@@ -136,6 +159,8 @@ body {
 .card .card-avatar:hover {
   transform: scale(1.1);
 }
+
+/* line divider styles */
 .card hr {
   position: relative;
   width: 90%;
